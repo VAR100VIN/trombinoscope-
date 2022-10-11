@@ -1,0 +1,24 @@
+<html>
+    <div id="toto"></div>
+<script>
+function load_student_via_api(students){
+    console.log(students)
+    let d = document.createElement("div");
+    for(student of students){
+        d.innerHTML += student + "-";
+    }
+    document.getElementById("toto").appendChild(d)
+    }
+    function load_student(){
+        fetch('./etudiant.json')
+        .then(data =>etudiants.json())
+        results => load_student_via_api(results.students)
+    }
+
+load_students()
+</script>
+
+
+
+</html>
+https://api.github.com/users/{username}
